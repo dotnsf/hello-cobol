@@ -1,0 +1,95 @@
+1PP 5737-L11 IBM COBOL for Linux                     1.1.0                Date 04/25/2021  Time 10:04:14   Page     1               
+0有効なオプション:
+  NOADATA                                                                                                                            
+    ADDR(32)                                                                                                                         
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+    BINARY(NATIVE)                                                                                                                   
+    CALLINT(NODESCRIPTOR)                                                                                                            
+    CHAR(NATIVE)                                                                                                                     
+  NOCICS                                                                                                                             
+    COLLSEQ(BINARY)                                                                                                                  
+  NOCOMPILE(S)                                                                                                                       
+  NOCURRENCY                                                                                                                         
+    DATETIME(1900,40)                                                                                                                
+  NODATEPROC                                                                                                                         
+  NODEFINE                                                                                                                           
+  NODIAGTRUNC                                                                                                                        
+  NODYNAM                                                                                                                            
+  NOEXIT                                                                                                                             
+    FLAG(I,I)                                                                                                                        
+  NOFLAGSTD                                                                                                                          
+    FLOAT(NATIVE)                                                                                                                    
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+    LSTFILE(LOCALE)                                                                                                                  
+  NOMAP                                                                                                                              
+    MAXMEM(2048K)                                                                                                                    
+  NOMDECK                                                                                                                            
+    NCOLLSEQ(BINARY)                                                                                                                 
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+  NOOPTIMIZE                                                                                                                         
+    PGMNAME(LONGUPPER)                                                                                                               
+    SEPOBJ                                                                                                                           
+    SEQUENCE                                                                                                                         
+    SIZE(8388608)                                                                                                                    
+  NOSOSI                                                                                                                             
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+    SPILL(512)                                                                                                                       
+  NOSQL                                                                                                                              
+    SRCFORMAT(COMPAT)                                                                                                                
+  NOSSRANGE                                                                                                                          
+    TERM                                                                                                                             
+  NOTEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+    UTF16(NATIVE)                                                                                                                    
+  NOVBREF                                                                                                                            
+  NOWSCLEAR                                                                                                                          
+    XREF(FULL)                                                                                                                       
+    YEARWINDOW(1900)                                                                                                                 
+    ZWB                                                                                                                              
+1PP 5737-L11 IBM COBOL for Linux                     1.1.0      HELLO     Date 04/25/2021  Time 10:04:14   Page     2               
+   行 ID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 マップおよび相互参照           
+0  000001         000100 IDENTIFICATION DIVISION.                                                 |                                  
+   000002         000200 PROGRAM-ID. HELLO.                                                       |                                  
+   000003         000300 AUTHOR.     K.KIMURA.                                                    |                                  
+   000004         000400 ENVIRONMENT DIVISION.                                                    |                                  
+   000005         000500 DATA DIVISION.                                                           |                                  
+   000006         000600 PROCEDURE DIVISION.                                                      |                                  
+   000007         000700 MAINLINE.                                                                |                                  
+   000008         000800     DISPLAY 'Hello World!'.                                              |                                  
+   000009         000900     STOP RUN.                                                            |                                  
+   000010                                                                                         |                                  
+1PP 5737-L11 IBM COBOL for Linux                     1.1.0      HELLO     Date 04/25/2021  Time 10:04:14   Page     3               
+0データ名参照の前に "M" がある場合には、データ名がこの参照により修飾されていることを示します。
+  
+  定義済み  データ名の相互参照              参照                                                                      
+  
+1PP 5737-L11 IBM COBOL for Linux                     1.1.0      HELLO     Date 04/25/2021  Time 10:04:14   Page     4               
+0コンテキストでの用途は、プロシージャー名参照の前にある文字により示されます。
+ 各文字とその意味を次に示します。
+     A = ALTER (プロシージャー名)
+     D = GO TO (プロシージャー名) DEPENDING ON
+     E = (PERFORM) から (プロシージャー名) の範囲の終わり
+     G = GO TO (プロシージャー名)
+     P = PERFORM (プロシージャー名)
+     T = (ALTER) TO PROCEED TO (プロシージャー名)
+     U = USE FOR DEBUGGING (プロシージャー名)
+  
+  定義済み  プロシージャーの相互参照        参照                                                                   
+  
+        7   MAINLINE                                                                                                                                                                             
+1PP 5737-L11 IBM COBOL for Linux                     1.1.0      HELLO     Date 04/25/2021  Time 10:04:14   Page     5               
+0 定義済み  プログラムの相互参照            参照                                                                     
+  
+        2   HELLO                                                                                                                                                                                
+-* COBOL プログラム HELLO の統計:
+*    ソース・レコード = 10
+*    データ部ステートメント = 0
+*    プロシージャー部ステートメント = 2
+0ロケール = ja_JP.UTF-8
+0コンパイルの終わり 1、 プログラム HELLO、フラグが付いているステートメントはありません。
+0戻りコード 0
